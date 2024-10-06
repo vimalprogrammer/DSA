@@ -1,0 +1,95 @@
+
+Data Structures and Algorithms (DSA) Cheat Sheet
+
+Big-O Complexity
+- O(1): Constant time
+- O(log n): Logarithmic time (e.g., binary search)
+- O(n): Linear time (e.g., single loop)
+- O(n log n): Log-linear time (e.g., merge sort, quicksort average case)
+- O(n²): Quadratic time (e.g., bubble sort, insertion sort)
+- O(2ⁿ): Exponential time (e.g., recursive Fibonacci)
+- O(n!): Factorial time (e.g., solving the traveling salesman problem via brute force)
+
+Data Structures
+1. Arrays
+- Access: O(1)
+- Search: O(n)
+- Insertion/Deletion: O(n)
+- Use Case: Fast lookups, fixed-size data structures
+
+2. Linked List
+- Access/Search: O(n)
+- Insertion/Deletion (at head): O(1)
+- Types: Singly, Doubly, Circular
+- Use Case: Efficient insertions/deletions
+
+3. Stack
+- Push/Pop: O(1)
+- Peek: O(1)
+- Use Case: LIFO operations (e.g., function calls, undo mechanisms)
+
+4. Queue
+- Enqueue/Dequeue: O(1)
+- Peek: O(1)
+- Use Case: FIFO operations (e.g., scheduling, buffering)
+
+5. Hash Table
+- Search/Insertion/Deletion (average case): O(1)
+- Worst Case: O(n) (due to collisions)
+- Use Case: Fast lookups, key-value pairs (e.g., dictionaries)
+
+6. Trees
+- Binary Tree: Each node has ≤ 2 children
+- Binary Search Tree (BST):
+  - Search/Insert/Delete: O(log n) average, O(n) worst case
+- Balanced Trees (AVL, Red-Black): O(log n) for search/insert/delete
+- Use Case: Hierarchical data, fast search/insertion
+
+7. Heaps (Priority Queue)
+- Insert/Delete Max/Min: O(log n)
+- Peek Max/Min: O(1)
+- Use Case: Efficient retrieval of the largest/smallest element
+
+8. Graphs
+- Adjacency Matrix: O(1) access, O(n²) space
+- Adjacency List: O(n + e) space
+- DFS/BFS: O(V + E) (V = vertices, E = edges)
+- Use Case: Network modeling, pathfinding algorithms
+
+Algorithms
+1. Sorting Algorithms
+- Bubble Sort: O(n²)
+- Selection Sort: O(n²)
+- Insertion Sort: O(n²)
+- Merge Sort: O(n log n)
+- Quick Sort: O(n log n) average, O(n²) worst case
+- Heap Sort: O(n log n)
+- Counting/Radix Sort: O(n + k) (for small ranges)
+
+2. Search Algorithms
+- Linear Search: O(n)
+- Binary Search: O(log n) (on sorted arrays)
+
+3. Tree Traversal
+- In-order (BST): O(n)
+- Pre-order/Post-order: O(n)
+- Level-order (BFS): O(n)
+
+4. Graph Algorithms
+- Depth-First Search (DFS): O(V + E)
+- Breadth-First Search (BFS): O(V + E)
+- Dijkstra’s Algorithm: O((V + E) log V) (with min-heap)
+- Floyd-Warshall: O(V³) (for all-pairs shortest path)
+- Prim’s/MST (with heap): O(E log V)
+
+5. Dynamic Programming
+- Fibonacci (DP): O(n)
+- Knapsack Problem: O(nW) (W = capacity of knapsack)
+- Longest Common Subsequence: O(n²)
+- Memoization: Store results of expensive function calls to avoid duplicate computations
+
+Common Problems & Techniques
+- Two-pointer technique: Efficient for problems involving sorted arrays, strings
+- Sliding window: Used in problems involving subarrays or substrings (e.g., finding maximum in a subarray)
+- Greedy algorithms: Used in problems like interval scheduling, Huffman coding, and Dijkstra’s algorithm
+- Backtracking: Used in constraint satisfaction problems like the N-Queens problem
