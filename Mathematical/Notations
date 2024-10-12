@@ -1,0 +1,91 @@
+Big O, Omega, and Theta notations are used in algorithm analysis to describe the time complexity of algorithms. Here's a simple example of Java programs to illustrate these notations using different algorithms.
+
+1. Big O Notation (Upper Bound)
+The Big O notation gives an upper bound on the time complexity of an algorithm. Here's an example that runs a linear loop, which has a time complexity of O(n).
+
+java
+Copy code
+public class BigONotationExample {
+    public static void main(String[] args) {
+        int n = 10;
+        printNumbers(n);  // This runs in O(n)
+    }
+
+    public static void printNumbers(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);  // Runs n times
+        }
+    }
+}
+Explanation:
+The function printNumbers has a for-loop that runs n times. Hence, its time complexity is O(n).
+2. Omega Notation (Lower Bound)
+The Omega notation provides a lower bound on the time complexity. In this example, a function runs in Ω(n), which guarantees that the function will run at least n times.
+
+java
+Copy code
+public class OmegaNotationExample {
+    public static void main(String[] args) {
+        int n = 10;
+        printNumbersAtLeastN(n);  // This runs in Ω(n)
+    }
+
+    public static void printNumbersAtLeastN(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);  // Will run at least n times
+        }
+    }
+}
+Explanation:
+The time complexity is Ω(n) because, no matter what, the loop must run at least n times.
+3. Theta Notation (Tight Bound)
+The Theta notation (Θ) is used when the algorithm's complexity is both upper and lower bound by the same function. In this case, the function runs in exactly n times, which makes it Θ(n).
+
+java
+Copy code
+public class ThetaNotationExample {
+    public static void main(String[] args) {
+        int n = 10;
+        printExactN(n);  // This runs in Θ(n)
+    }
+
+    public static void printExactN(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);  // Runs exactly n times
+        }
+    }
+}
+Explanation:
+This is Θ(n) because the function has to run exactly n times, not more or less. Therefore, the time complexity is tightly bound by n.
+
+
+//A simple example of Big O, Omega, and Theta notations in Java
+
+1. Searching an Element in an Unsorted Array
+Problem:
+Given an unsorted array, find if a target element exists.
+
+Example:
+java
+Copy code
+public class SearchUnsortedArray {
+    public static void main(String[] args) {
+        int[] arr = {10, 5, 3, 9, 7, 8, 2};
+        int target = 9;
+        boolean found = search(arr, target);
+        System.out.println("Element found: " + found);
+    }
+
+    public static boolean search(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+Time Complexity:
+Big O (Worst-case): O(n) — In the worst case, the target element is the last element or is not present at all, requiring the algorithm to scan the entire array.
+Omega (Best-case): Ω(1) — In the best case, the target element is found on the first attempt.
+Theta (Average-case): Θ(n) — On average, half of the elements will be scanned, leading to linear time complexity.
