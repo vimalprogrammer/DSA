@@ -1,4 +1,4 @@
-public class Solution {
+public class ReverseString {
     // public int[] solve(int[] A, int B, int C) 
     // {
     //     reverse(A,B,C);
